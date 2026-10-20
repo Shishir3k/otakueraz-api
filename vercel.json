@@ -2,40 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/docs/landing.html"
-    },
-    {
-      "source": "/docs",
-      "destination": "/docs/index.html"
-    },
-    {
-      "source": "/style.css",
-      "destination": "/docs/style.css"
-    },
-    {
-      "source": "/logo.svg",
-      "destination": "/docs/logo.svg"
-    },
-    {
-      "source": "/map/:path*",
-      "destination": "/api/map/:path*"
-    },
-    {
-      "source": "/episodes/:path*",
-      "destination": "/api/episodes/:path*"
-    },
-    {
-      "source": "/watch/:path*",
-      "destination": "/api/watch/:path*"
-    },
-    {
-      "source": "/stream/:path*",
-      "destination": "/api/stream/:path*"
-    },
-    {
-      "source": "/captcha/:path*",
-      "destination": "/api/captcha/:path*"
+      "source": "/(.*)",
+      "destination": "/api/$1"
     }
   ]
 }
