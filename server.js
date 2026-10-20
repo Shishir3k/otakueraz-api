@@ -76,5 +76,5 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Anivexa dev server → http://localhost:${PORT}`);
+  console.log(`OtakuEraZ dev server → http://localhost:${PORT}`);
 });

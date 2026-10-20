@@ -4,12 +4,12 @@
 <img src="docs/logo.svg" width="80" height="80"/>
 
 
-# Anivexa API
+# OtakuEraZ API
 
 **Anime streaming aggregator API — one endpoint, all your sources.**
 
-![Views](https://visitor-badge.laobi.icu/badge?page_id=walterwhite-69.Anivexa-API)
-[![GitHub stars](https://img.shields.io/github/stars/walterwhite-69/Anivexa-API?style=flat-square&color=yellow)](https://github.com/walterwhite-69/Anivexa-API/stargazers)
+![Views](https://visitor-badge.laobi.icu/badge?page_id=walterwhite-69.OtakuEraZ-API)
+[![GitHub stars](https://img.shields.io/github/stars/walterwhite-69/OtakuEraZ-API?style=flat-square&color=yellow)](https://github.com/walterwhite-69/OtakuEraZ-API/stargazers)
 
 
 </div>
@@ -192,7 +192,7 @@ The API does not expose a public ReAnime `/proxy` route. If you need direct cust
 
 ```bash
 git clone https://github.com/walterwhite-69/Anivexa-API
-cd Anivexa-API
+cd OtakuEraZ-API
 npm install
 cp .env.example .env
 node server.js
@@ -213,6 +213,21 @@ Copy `.env.example` to `.env` and fill in the values.
 | `PORT` | `4000` | Local dev server port (`server.js` only — ignored on Vercel/serverless). Change it if `4000` is already in use, then hit `http://localhost:PORT`. |
 
 On Vercel (or Railway/Render), set these as regular project environment variables instead of committing `.env`.
+
+---
+
+## Deploying on Cloudflare Workers
+
+The API's Worker entry point is `index.js`; the Node.js development server in `server.js` is not used for this deployment. No separate proxy Worker is required.
+
+```bash
+npm install
+npm run dev:worker
+npm run build:worker
+npm run deploy:worker
+```
+
+Wrangler will prompt you to authenticate if needed. After deployment, use the `workers.dev` URL Wrangler prints as the API base URL. Cloudflare's free plan has per-request CPU and daily request limits, and provider availability may vary because upstream sites can block Worker traffic.
 
 ---
 

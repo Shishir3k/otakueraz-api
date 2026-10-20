@@ -25,6 +25,7 @@ const IS_LOCAL_NODE = (() => {
     return (
       typeof process !== "undefined" &&
       typeof process.versions?.node === "string" &&
+      typeof globalThis.WebSocketPair === "undefined" &&
       !process.env.VERCEL
     );
   } catch { return false; }
