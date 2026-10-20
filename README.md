@@ -191,7 +191,7 @@ The API does not expose a public ReAnime `/proxy` route. If you need direct cust
 ## Self-hosted
 
 ```bash
-git clone https://github.com/walterwhite-69/Anivexa-API
+git clone https://github.com/Shishir3k/otakueraz-api.git
 cd OtakuEraZ-API
 npm install
 cp .env.example .env
