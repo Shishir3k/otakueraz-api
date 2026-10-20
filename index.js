@@ -253,7 +253,7 @@ export default {
     if (path.startsWith("/watch/")) return json({ error: "Not found" }, 404);
 
     return json({
-      name: `Anivexa API ${env?.API_VERSION ?? "unknown"}`,
+      name: `OtakuEraZ API ${env?.API_VERSION ?? "unknown"}`,
       cache: _CACHE_ENABLED,
       providers: [
         "mkissa",
